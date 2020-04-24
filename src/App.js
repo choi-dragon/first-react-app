@@ -10,9 +10,9 @@ class App extends Component {
 			searchField: "",
 		};
 	}
-	async componentDidMount() {
+	componentDidMount() {
 		// this is similar to useEffect, which is triggered when this component is rendered.
-		await fetch("https://jsonplaceholder.typicode.com/users")
+		fetch("https://jsonplaceholder.typicode.com/users")
 			.then((response) => response.json())
 			.then((users) => this.setState({ users }))
 			.catch((e) => console.log(e));
